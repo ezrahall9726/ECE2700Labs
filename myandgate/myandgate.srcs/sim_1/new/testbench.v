@@ -37,6 +37,7 @@ module testbench(
         in1 = 0; in2 = 1;
         #10
         in1 = 1; in2 = 1;
+        #10
         $finish;
     end
     
