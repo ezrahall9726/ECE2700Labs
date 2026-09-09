@@ -2,3 +2,6 @@
 
 Repository for all labs in Digital Circuits (ECE2700)\
 Owner: Ezra Hall A02447865
+\
+\
+All labs are in a separate branch
