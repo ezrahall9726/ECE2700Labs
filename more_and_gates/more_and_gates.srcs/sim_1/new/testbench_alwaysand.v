@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/16/2026 02:34:39 PM
+// Create Date: 09/16/2026 03:14:42 PM
 // Design Name: 
-// Module Name: testbench_continuousand
+// Module Name: testbench_alwaysand
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,13 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module testbench_continuousand (
-);
+module testbench_alwaysand(
+
+    );
+    
+    
     reg in1, in2;
     wire out;
 
-    continuousand CTA (.A(in1), .B(in2), .F(out));
-
+    alwaysand AA (.A(in1), .B(in2), .F(out));
+    
     initial begin
         in1 = 0; in2 = 0;
         #10
@@ -37,7 +40,6 @@ module testbench_continuousand (
         in1 = 1; in2 = 1;
         #10
         $finish;
-        
     end
-endmodule
 
+endmodule
