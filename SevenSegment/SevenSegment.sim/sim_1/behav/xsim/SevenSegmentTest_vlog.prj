@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../SevenSegment.srcs/sources_1/new/SevenSegmentTruthTable.v" \
+"../../../../SevenSegment.srcs/sources_1/new/SevenSegmentHex.v" \
 "../../../../SevenSegment.srcs/sources_1/new/sevenSegmentTop.v" \
 "../../../../SevenSegment.srcs/sim_1/new/sevenSegmentTest.v" \
 

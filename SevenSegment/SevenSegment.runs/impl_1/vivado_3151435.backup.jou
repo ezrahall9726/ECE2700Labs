@@ -3,22 +3,22 @@
 # SW Build 5266912 on Sun Dec 15 09:03:31 MST 2024
 # IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
 # SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
-# Start of session at: Tue Oct  6 11:22:20 2026
-# Process ID         : 3155365
+# Start of session at: Tue Oct  6 11:18:51 2026
+# Process ID         : 3151435
 # Current directory  : /home/a02447865/Desktop/Lab4/ECE2700Labs/SevenSegment/SevenSegment.runs/impl_1
-# Command line       : vivado -log SevenSegmentTop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SevenSegmentTop.tcl -notrace
-# Log file           : /home/a02447865/Desktop/Lab4/ECE2700Labs/SevenSegment/SevenSegment.runs/impl_1/SevenSegmentTop.vdi
+# Command line       : vivado -log SevenSegmentHex.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SevenSegmentHex.tcl -notrace
+# Log file           : /home/a02447865/Desktop/Lab4/ECE2700Labs/SevenSegment/SevenSegment.runs/impl_1/SevenSegmentHex.vdi
 # Journal file       : /home/a02447865/Desktop/Lab4/ECE2700Labs/SevenSegment/SevenSegment.runs/impl_1/vivado.jou
 # Running On         : el120-04.ece.usu.edu
 # Platform           : AlmaLinux
 # Operating System   : AlmaLinux 9.6 (Sage Margay)
 # Processor Detail   : Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz
-# CPU Frequency      : 4080.741 MHz
+# CPU Frequency      : 4096.791 MHz
 # CPU Physical cores : 4
 # CPU Logical cores  : 8
 # Host memory        : 16513 MB
 # Swap memory        : 8409 MB
 # Total Virtual      : 24923 MB
-# Available Virtual  : 13983 MB
+# Available Virtual  : 13966 MB
 #-----------------------------------------------------------
-source SevenSegmentTop.tcl -notrace
+source SevenSegmentHex.tcl -notrace

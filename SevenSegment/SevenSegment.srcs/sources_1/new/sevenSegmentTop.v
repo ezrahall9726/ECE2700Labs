@@ -26,12 +26,13 @@ module SevenSegmentTop(
     );
         wire [6:0] D;
         
-        wire NAN = sw[3]&sw[2] | sw[3]&sw[1];
-        assign seg = ~(D & ~{7{NAN}});
+        //wire NAN = sw[3]&sw[2] | sw[3]&sw[1];
+        //assign seg = ~(D & ~{7{NAN}});
+        assign seg = ~D;
         
         assign an = ~sw[7:4];
     
-        SevenSegmentTruthTable S1(
+        SevenSegmentHex S1(
 //        SevenSegmentAssign S1(
             .x3(sw[3]),
             .x2(sw[2]),

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2.1 (lin64) Build 5266912 Sun Dec 15 09:03:31 MST 2024
-| Date             : Tue Oct  6 10:56:53 2026
+| Date             : Tue Oct  6 11:22:09 2026
 | Host             : el120-04.ece.usu.edu running 64-bit AlmaLinux 9.6 (Sage Margay)
 | Command          : report_power -file SevenSegmentTop_power_routed.rpt -pb SevenSegmentTop_power_summary_routed.pb -rpx SevenSegmentTop_power_routed.rpx
 | Design           : SevenSegmentTop
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 11.107       |
+| Total On-Chip Power (W)  | 10.847       |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 10.949       |
-| Device Static (W)        | 0.158        |
+| Dynamic (W)              | 10.693       |
+| Device Static (W)        | 0.154        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 29.5         |
-| Junction Temperature (C) | 80.5         |
+| Max Ambient (C)          | 30.8         |
+| Junction Temperature (C) | 79.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -55,9 +55,9 @@ Table of Contents
 | Slice Logic    |     0.027 |       11 |       --- |             --- |
 |   LUT as Logic |     0.027 |        8 |     20800 |            0.04 |
 | Signals        |     0.128 |       19 |       --- |             --- |
-| I/O            |    10.793 |       19 |       106 |           17.92 |
-| Static Power   |     0.158 |          |           |                 |
-| Total          |    11.107 |          |           |                 |
+| I/O            |    10.539 |       19 |       106 |           17.92 |
+| Static Power   |     0.154 |          |           |                 |
+| Total          |    10.847 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -67,9 +67,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.268 |       0.188 |      0.080 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.415 |       0.394 |      0.021 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     3.047 |       3.046 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.263 |       0.187 |      0.076 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.405 |       0.385 |      0.020 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     2.975 |       2.974 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -134,7 +134,7 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| SevenSegmentTop |    10.949 |
+| SevenSegmentTop |    10.693 |
 +-----------------+-----------+
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2024.2.1 (lin64) Build 5266912 Sun Dec 15 09:03:31 MST 2024
-| Date                      : Tue Oct  6 10:56:36 2026
+| Date                      : Tue Oct  6 11:21:53 2026
 | Host                      : el120-04.ece.usu.edu running 64-bit AlmaLinux 9.6 (Sage Margay)
 | Command                   : report_io -file SevenSegmentTop_io_placed.rpt
 | Design                    : SevenSegmentTop

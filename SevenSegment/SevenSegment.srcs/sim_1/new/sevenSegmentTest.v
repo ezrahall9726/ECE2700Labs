@@ -44,7 +44,7 @@ module SevenSegmentTest;
     end
     
     always @(posedge clk) begin
-        if (sw >= 9)
+        if (sw >= 15)
             sw <= 0;
         else
             sw <= sw + 1;

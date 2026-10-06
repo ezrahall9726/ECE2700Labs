@@ -77,7 +77,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  /home/a02447865/Desktop/Lab4/ECE2700Labs/SevenSegment/SevenSegment.srcs/sources_1/new/SevenSegmentTruthTable.v
+  /home/a02447865/Desktop/Lab4/ECE2700Labs/SevenSegment/SevenSegment.srcs/sources_1/new/SevenSegmentHex.v
   /home/a02447865/Desktop/Lab4/ECE2700Labs/SevenSegment/SevenSegment.srcs/sources_1/new/sevenSegmentTop.v
 }
 OPTRACE "Adding files" END { }
