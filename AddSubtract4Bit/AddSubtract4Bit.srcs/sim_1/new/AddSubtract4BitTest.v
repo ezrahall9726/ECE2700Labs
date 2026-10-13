@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module AddSubtract4BitTest;
+module AddSubtractTop;
     reg [3:0] A, B;
     reg subtract;
     wire [3:0] result;

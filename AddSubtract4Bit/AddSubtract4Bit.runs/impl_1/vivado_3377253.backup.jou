@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2.1 (64-bit)
+# SW Build 5266912 on Sun Dec 15 09:03:31 MST 2024
+# IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+# SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+# Start of session at: Tue Oct 13 17:52:46 2026
+# Process ID         : 3377253
+# Current directory  : /home/a02447865/Desktop/Lab5/AddSubtract4Bit/AddSubtract4Bit.runs/impl_1
+# Command line       : vivado -log AddSubtractTop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source AddSubtractTop.tcl -notrace
+# Log file           : /home/a02447865/Desktop/Lab5/AddSubtract4Bit/AddSubtract4Bit.runs/impl_1/AddSubtractTop.vdi
+# Journal file       : /home/a02447865/Desktop/Lab5/AddSubtract4Bit/AddSubtract4Bit.runs/impl_1/vivado.jou
+# Running On         : el103-19.ece.usu.edu
+# Platform           : AlmaLinux
+# Operating System   : AlmaLinux 9.6 (Sage Margay)
+# Processor Detail   : Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+# CPU Frequency      : 4301.096 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16440 MB
+# Swap memory        : 8371 MB
+# Total Virtual      : 24811 MB
+# Available Virtual  : 13978 MB
+#-----------------------------------------------------------
+source AddSubtractTop.tcl -notrace

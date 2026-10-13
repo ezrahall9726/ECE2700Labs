@@ -1,7 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../../AddSubtract/AddSubtract.srcs/sources_1/new/AddSubtract4Bit.v" \
-"../../../../AddSubtract4Bit.srcs/sim_1/new/AddSubtract4BitTest.v" \
+"../../../../AddSubtract4Bit.srcs/sources_1/new/AddSubtractTop.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
