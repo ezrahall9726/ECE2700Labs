@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/a02447865/Desktop/Lab5/AddSubtract/AddSubtract.srcs/sources_1/new/AddSubtract4Bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddSubtract4Bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/a02447865/Desktop/Lab5/AddSubtract4Bit/AddSubtract4Bit.srcs/sim_1/new/AddSubtract4BitTest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddSubtract4BitTest
