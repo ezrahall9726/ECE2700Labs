@@ -2,3 +2,6 @@ Running: xsim.dir/fullAdderTest_behav/xsimk -simmode gui -wdb fullAdderTest_beha
 Design successfully loaded
 Design Loading Memory Usage: 392928 KB (Peak: 393048 KB)
 Design Loading CPU Usage: 1140 ms
+Simulation completed
+Simulation Memory Usage: 474664 KB (Peak: 532196 KB)
+Simulation CPU Usage: 1140 ms

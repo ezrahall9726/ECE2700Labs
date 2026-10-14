@@ -2,5 +2,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/a02447865/Desktop/Lab6/ECE270
 INFO: [VRFC 10-311] analyzing module fullAdder
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/sources_1/new/halfAdder.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module halfAdder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/sim_1/new/fullAdderTest.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fullAdderTest
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/sources_1/new/rippleCarryAdder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rippleCarryAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/sim_1/new/rippleCarryAdderTest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rippleCarryAdderTest

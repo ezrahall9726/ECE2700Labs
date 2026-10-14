@@ -1,7 +1,7 @@
 Vivado Simulator v2024.2.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /ece/vivado/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot fullAdderTest_behav xil_defaultlib.fullAdderTest xil_defaultlib.glbl -log elaborate.log 
+Running: /ece/vivado/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot rippleCarryAdderTest_behav xil_defaultlib.rippleCarryAdderTest xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -11,6 +11,7 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.halfAdder
 Compiling module xil_defaultlib.fullAdder
-Compiling module xil_defaultlib.fullAdderTest
+Compiling module xil_defaultlib.rippleCarryAdder
+Compiling module xil_defaultlib.rippleCarryAdderTest
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot fullAdderTest_behav
+Built simulation snapshot rippleCarryAdderTest_behav

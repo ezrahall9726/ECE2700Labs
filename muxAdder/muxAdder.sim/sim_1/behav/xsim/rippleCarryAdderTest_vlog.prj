@@ -2,7 +2,8 @@
 verilog xil_defaultlib  \
 "../../../../muxAdder.srcs/sources_1/new/fullAdder.v" \
 "../../../../muxAdder.srcs/sources_1/new/halfAdder.v" \
-"../../../../muxAdder.srcs/sim_1/new/fullAdderTest.v" \
+"../../../../muxAdder.srcs/sources_1/new/rippleCarryAdder.v" \
+"../../../../muxAdder.srcs/sim_1/new/rippleCarryAdderTest.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
