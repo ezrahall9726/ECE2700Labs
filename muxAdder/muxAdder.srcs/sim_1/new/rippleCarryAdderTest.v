@@ -20,23 +20,34 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module rippleCarryAdderTest(
+module adderTest(
 
     );
     reg [3:0] A, B;
+    reg carry_in;
     wire [3:0] result;
     wire carry_out;
     
     // Instantiate your AddSubtractTop module here
-    rippleCarryAdder adder (
+//    rippleCarryAdder adder (
+//        .a(A),
+//        .b(B),
+//        .cin(1'b0),
+//        .sum(result),
+//        .cout(carry_out)
+//        );
+    
+    carrySelectAdder adder (
         .a(A),
         .b(B),
-        .cin(1'b0),
+        .cin(carry_in),
         .sum(result),
         .cout(carry_out)
-        );
+    );
+    
     
     initial begin
+        carry_in = 1'b0;
         // Test 1: Basic addition (3 + 5 = 8, overflow)
         A = 4'b0011; B = 4'b0101;  #10;
         
@@ -58,6 +69,7 @@ module rippleCarryAdderTest(
         // Test 8: Zero operand (0 + 5 = 5)
         A = 4'b0000; B = 4'b0101;  #10;
         
+        carry_in = 1'b1;
         // Test 9: Subtract from zero (0 - 5 = -5)
         A = 4'b0000; B = 4'b0101;  #10;
         

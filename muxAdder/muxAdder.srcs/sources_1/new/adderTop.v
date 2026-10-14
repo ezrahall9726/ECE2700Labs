@@ -33,13 +33,21 @@ module adderTop(
     
     // adder goes here
     
-    rippleCarryAdder adder (
+//    rippleCarryAdder adder (
+//        .a(A),
+//        .b(B),
+//        .cin(1'b0),
+//        .sum(result),
+//        .cout(cout)
+//   ); 
+
+    carrySelectAdder adder (
         .a(A),
         .b(B),
         .cin(1'b0),
         .sum(result),
         .cout(cout)
-   ); 
+    );
     
     assign led[3:0] = result[3:0];
     assign led[4] = cout;

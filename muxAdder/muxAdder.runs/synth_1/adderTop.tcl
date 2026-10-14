@@ -58,6 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3410755-el120-02.ece.usu.edu/incrSyn
 set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
@@ -79,8 +80,10 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/sources_1/new/carrySelectAdder.v
   /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/sources_1/new/fullAdder.v
   /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/sources_1/new/halfAdder.v
+  /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/sources_1/new/mux2to1.v
   /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/sources_1/new/rippleCarryAdder.v
   /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/sources_1/new/adderTop.v
 }

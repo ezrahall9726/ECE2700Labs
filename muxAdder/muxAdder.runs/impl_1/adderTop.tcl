@@ -102,41 +102,155 @@ set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
-OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
-OPTRACE "write_bitstream setup" START { }
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
+OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
+start_step init_design
+set ACTIVE_STEP init_design
 set rc [catch {
-  create_msg_db write_bitstream.pb
+  create_msg_db init_design.pb
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
   set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3410755-el120-02.ece.usu.edu/incrSyn
   set_param runs.launchOptions { -jobs 6  }
-  open_checkpoint adderTop_routed.dcp
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xc7a35tcpg236-1
+  set_property board_part_repo_paths {/home/a02447865/.Xilinx/Vivado/2024.2.1/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.cache/wt [current_project]
-set_property TOP adderTop [current_fileset]
-OPTRACE "read constraints: write_bitstream" START { }
-OPTRACE "read constraints: write_bitstream" END { }
-  catch { write_mem_info -force -no_partial_mmi adderTop.mmi }
-OPTRACE "write_bitstream setup" END { }
-OPTRACE "write_bitstream" START { }
-  write_bitstream -force adderTop.bit 
-OPTRACE "write_bitstream" END { }
-OPTRACE "write_bitstream misc" START { }
-OPTRACE "read constraints: write_bitstream_post" START { }
-OPTRACE "read constraints: write_bitstream_post" END { }
-  catch {write_debug_probes -quiet -force adderTop}
-  catch {file copy -force adderTop.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
+  set_property parent.project_path /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.xpr [current_project]
+  set_property ip_output_repo /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.runs/synth_1/adderTop.dcp
+OPTRACE "read constraints: implementation" START { }
+  read_xdc /home/a02447865/Desktop/Lab6/ECE2700Labs/muxAdder/muxAdder.srcs/constrs_1/imports/Downloads/Basys3Master.xdc
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "read constraints: implementation_pre" START { }
+OPTRACE "read constraints: implementation_pre" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  link_design -top adderTop -part xc7a35tcpg236-1 
+OPTRACE "link_design" END { }
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
+OPTRACE "init_design_reports" START { REPORT }
+OPTRACE "init_design_reports" END { }
+OPTRACE "init_design_write_hwdef" START { }
+OPTRACE "init_design_write_hwdef" END { }
+  close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
-  step_failed write_bitstream
+  step_failed init_design
   return -code error $RESULT
 } else {
-  end_step write_bitstream
+  end_step init_design
   unset ACTIVE_STEP 
 }
 
-OPTRACE "write_bitstream misc" END { }
-OPTRACE "Phase: Write Bitstream" END { }
+OPTRACE "Phase: Init Design" END { }
+OPTRACE "Phase: Place Design" START { ROLLUP_AUTO }
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+OPTRACE "read constraints: place_design" START { }
+OPTRACE "read constraints: place_design" END { }
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+OPTRACE "implement_debug_core" START { }
+    implement_debug_core 
+OPTRACE "implement_debug_core" END { }
+  } 
+OPTRACE "place_design" START { }
+  place_design 
+OPTRACE "place_design" END { }
+OPTRACE "read constraints: place_design_post" START { }
+OPTRACE "read constraints: place_design_post" END { }
+OPTRACE "place_design reports" START { REPORT }
+  set_param project.isImplRun true
+  generate_parallel_reports -reports { "report_io -file adderTop_io_placed.rpt" "report_utilization -file adderTop_utilization_placed.rpt -pb adderTop_utilization_placed.pb" "report_control_sets -verbose -file adderTop_control_sets_placed.rpt"  }
+  set_param project.isImplRun false
+OPTRACE "place_design reports" END { }
+OPTRACE "Place Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force adderTop_placed.dcp
+OPTRACE "Place Design: write_checkpoint" END { }
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Place Design" END { }
+OPTRACE "Phase: Physical Opt Design" START { ROLLUP_AUTO }
+start_step phys_opt_design
+set ACTIVE_STEP phys_opt_design
+set rc [catch {
+  create_msg_db phys_opt_design.pb
+OPTRACE "read constraints: phys_opt_design" START { }
+OPTRACE "read constraints: phys_opt_design" END { }
+OPTRACE "phys_opt_design" START { }
+  phys_opt_design 
+OPTRACE "phys_opt_design" END { }
+OPTRACE "read constraints: phys_opt_design_post" START { }
+OPTRACE "read constraints: phys_opt_design_post" END { }
+OPTRACE "phys_opt_design report" START { REPORT }
+OPTRACE "phys_opt_design report" END { }
+OPTRACE "Post-Place Phys Opt Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force adderTop_physopt.dcp
+OPTRACE "Post-Place Phys Opt Design: write_checkpoint" END { }
+  close_msg_db -file phys_opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed phys_opt_design
+  return -code error $RESULT
+} else {
+  end_step phys_opt_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Physical Opt Design" END { }
+OPTRACE "Phase: Route Design" START { ROLLUP_AUTO }
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+OPTRACE "read constraints: route_design" START { }
+OPTRACE "read constraints: route_design" END { }
+OPTRACE "route_design" START { }
+  route_design 
+OPTRACE "route_design" END { }
+OPTRACE "read constraints: route_design_post" START { }
+OPTRACE "read constraints: route_design_post" END { }
+OPTRACE "route_design reports" START { REPORT }
+  set_param project.isImplRun true
+  generate_parallel_reports -reports { "report_drc -file adderTop_drc_routed.rpt -pb adderTop_drc_routed.pb -rpx adderTop_drc_routed.rpx" "report_methodology -file adderTop_methodology_drc_routed.rpt -pb adderTop_methodology_drc_routed.pb -rpx adderTop_methodology_drc_routed.rpx" "report_power -file adderTop_power_routed.rpt -pb adderTop_power_summary_routed.pb -rpx adderTop_power_routed.rpx" "report_route_status -file adderTop_route_status.rpt -pb adderTop_route_status.pb" "report_timing_summary -max_paths 10 -report_unconstrained -file adderTop_timing_summary_routed.rpt -pb adderTop_timing_summary_routed.pb -rpx adderTop_timing_summary_routed.rpx -warn_on_violation " "report_incremental_reuse -file adderTop_incremental_reuse_routed.rpt" "report_clock_utilization -file adderTop_clock_utilization_routed.rpt" "report_bus_skew -warn_on_violation -file adderTop_bus_skew_routed.rpt -pb adderTop_bus_skew_routed.pb -rpx adderTop_bus_skew_routed.rpx"  }
+  set_param project.isImplRun false
+OPTRACE "route_design reports" END { }
+OPTRACE "Route Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force adderTop_routed.dcp
+OPTRACE "Route Design: write_checkpoint" END { }
+OPTRACE "route_design misc" START { }
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
+OPTRACE "route_design write_checkpoint" END { }
+  write_checkpoint -force adderTop_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "route_design misc" END { }
+OPTRACE "Phase: Route Design" END { }
 OPTRACE "impl_1" END { }
