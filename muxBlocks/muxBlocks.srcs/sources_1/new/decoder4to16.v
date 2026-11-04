@@ -23,19 +23,19 @@
 module decoder4to16(
         input wire [3:0] d,
         input wire en,
-        output reg [15:0] y
+        output wire [15:0] y
     );
     
     decoder3to8 dec1 (
         .d(d[2:0]),
         .en(~d[3] & en),
-        .y(y[7:0])
+        .out(y[7:0])
     );
     
     decoder3to8 dec2 (
         .d(d[2:0]),
         .en(d[3] & en),
-        .y(y[15:8])
+        .out(y[15:8])
     );
        
     

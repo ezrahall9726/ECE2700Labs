@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+$stop called at time : 160 ns : File "/home/a02447865/ECE2700Labs/muxBlocks/muxBlocks.srcs/sim_1/new/decoderTest.v" Line 79
+INFO: xsimkernel Simulation Memory Usage: 474640 KB (Peak: 532172 KB), Simulation CPU Usage: 1110 ms
