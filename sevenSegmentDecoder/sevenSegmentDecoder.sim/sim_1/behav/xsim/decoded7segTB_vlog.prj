@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../sevenSegmentDecoder.srcs/sources_1/new/DecodedSevenSegment.v" \
+"../../../../../../Lab7/muxBlocks/muxBlocks.srcs/sources_1/new/decoder3to8.v" \
+"../../../../sevenSegmentDecoder.srcs/sources_1/new/decoder4to16.v" \
+"../../../../sevenSegmentDecoder.srcs/sim_1/new/decoded7segTB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
