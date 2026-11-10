@@ -23,7 +23,8 @@
 module DoubleSevenSegment(
     input [7:0] sw,
     input clk,
-    output [6:0] seg
+    output [6:0] seg,
+    output [1:0] an
     );
     
     wire [3:0] mux_out;
@@ -41,8 +42,13 @@ module DoubleSevenSegment(
         .sel(clk_slow),
         .out(mux_out)    
     );
+        
+    DecodedSevenSegment dec7 (
+        .code(mux_out),
+        .display(seg)    
+    ); 
     
-    // implement decoded 7 segment heres
+    assign an[0] = clk_slow;
+    assign an[1] = ~clk_slow;
     
-
 endmodule
