@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/a02447865/ECE2700Labs/stateMachines/stateMachines.srcs/sources_1/new/fsmDetect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsmDetect
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/a02447865/ECE2700Labs/stateMachines/stateMachines.srcs/sim_1/new/detectorTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ShiftFSMTest
