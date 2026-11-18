@@ -1,10 +1,70 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="a02447865" Host="el120-02.ece.usu.edu" Pid="1303422" HostCore="8" HostMemory="16028212">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2526410" HostCore="12" HostMemory="16054760">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="a02447865" Host="el120-02.ece.usu.edu" Pid="1304917" HostCore="8" HostMemory="16028212">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2527584" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2531470" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2533553" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2535122" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2538198" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2541540" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2544749" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2546072" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2549334" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2550698" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2554322" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2557400" HostCore="12" HostMemory="16054760">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="a02447865" Host="el103-20.ece.usu.edu" Pid="2560471" HostCore="12" HostMemory="16054760">
     </Process>
 </ProcessHandle>

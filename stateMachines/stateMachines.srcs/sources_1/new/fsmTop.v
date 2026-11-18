@@ -21,15 +21,20 @@
 
 
 module fsmTop(
-    input sw, btnC,
-    output led
+    input wire    sw,
+    input wire    btnC, clk,
+    
+    output     [4:0]    led
 );
 
 fsmDetect fsm (
-    .clk(btnC),
-    .din(sw),
-    .dout(led),
-    .reset(1'b0)
+    .clk(clk),
+    .serial_in(sw),
+    .unlock(led[0]),
+    .state_out(led[2:1]),
+    .next_state_out(led[4:3]),
+    .reset(1'b0),
+    .load(btnC)
 );
 
 

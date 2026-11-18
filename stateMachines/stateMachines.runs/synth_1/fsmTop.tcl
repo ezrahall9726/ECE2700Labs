@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/a02447865/ECE2700Labs/stateMachines/stateMachines.runs/synth_1/fsmTop.tcl"
+  variable script "/home/a02447865/Lab9/stateMachines/stateMachines.runs/synth_1/fsmTop.tcl"
   variable category "vivado_synth"
 }
 
@@ -57,8 +57,9 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 2
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-1277302-el120-02.ece.usu.edu/incrSyn
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-2512257-el103-20.ece.usu.edu/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -67,19 +68,19 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/a02447865/ECE2700Labs/stateMachines/stateMachines.cache/wt [current_project]
-set_property parent.project_path /home/a02447865/ECE2700Labs/stateMachines/stateMachines.xpr [current_project]
+set_property webtalk.parent_dir /home/a02447865/Lab9/stateMachines/stateMachines.cache/wt [current_project]
+set_property parent.project_path /home/a02447865/Lab9/stateMachines/stateMachines.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {/home/a02447865/.Xilinx/Vivado/2024.2.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo /home/a02447865/ECE2700Labs/stateMachines/stateMachines.cache/ip [current_project]
+set_property ip_output_repo /home/a02447865/Lab9/stateMachines/stateMachines.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  /home/a02447865/ECE2700Labs/stateMachines/stateMachines.srcs/sources_1/new/fsmDetect.v
-  /home/a02447865/ECE2700Labs/stateMachines/stateMachines.srcs/sources_1/new/fsmTop.v
+  /home/a02447865/Lab9/stateMachines/stateMachines.srcs/sources_1/new/fsmDetect.v
+  /home/a02447865/Lab9/stateMachines/stateMachines.srcs/sources_1/new/fsmTop.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -95,7 +96,7 @@ set_property used_in_implementation false [get_files /home/a02447865/Downloads/B
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/a02447865/ECE2700Labs/stateMachines/stateMachines.srcs/utils_1/imports/synth_1/fsmTop.dcp
+read_checkpoint -auto_incremental -incremental /home/a02447865/Lab9/stateMachines/stateMachines.srcs/utils_1/imports/synth_1/fsmTop.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

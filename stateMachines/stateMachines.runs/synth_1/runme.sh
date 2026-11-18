@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/a02447865/ECE2700Labs/stateMachines/stateMachines.runs/synth_1'
+HD_PWD='/home/a02447865/Lab9/stateMachines/stateMachines.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
